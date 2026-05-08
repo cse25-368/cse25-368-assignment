@@ -43,7 +43,7 @@
                 <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
               </ul>
                   <!-- Search form -->
-              <form class="d-flex" role="search" action="/search" method="get">
+              <form class="d-flex pb-4" role="search" action="/search" method="get">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
               </form>
@@ -58,82 +58,92 @@
 
           <section class="services">
           <h1>Services</h1>
-            <div class="row">
-              <div class="col-5 text-center">
-                <div class="row">
-                  <p>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapseOne" aria-expanded="true" aria-controls="flushCollapseOne">
-                    Relocations
-                    </button>
-                  </p> 
-                </div>
-                <div class="row">
-                  <p>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapseTwo" aria-expanded="false" aria-controls="flushCollapseTwo">
-                    Packaging 
-                    </button>
-                  </p>   
-                </div>
-                <div class="row">
-                  <p>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapseThree" aria-expanded="false" aria-controls="flushCollapseThree">
-                      Distribution
-                    </button>
-                  </p> 
-                </div>
-                <div class="row">
-                  <p>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapseFour" aria-expanded="false" aria-controls="flushCollapseFour">
-                      Shipping
-                    </button>
-                  </p> 
-                </div>
-              </div>
-              <div class="col-7">
-                <div class="accordion" id="accordionExample">
-                  <div id="flushCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                    <div class="card">
-                      <img src="C:\Users\msope\Pictures\walle.jpg" class="card-img-top" alt="Relocations" style="width:125px;height:100px;">
-                      <div class="card-body">
-                        <h5 class="card-title">Relocations</h5>
-                        <p class="card-text">Details about relocations go here.</p>
-                      </div>
-                    </div>
-                  </div>
+<div class="row">
+  <!-- Left column with buttons -->
+  <div class="col-5 text-center">
+    <button class="btn btn-primary w-100 mb-2 active" type="button"
+      data-bs-toggle="collapse" data-bs-target="#collapseOne">
+      Relocations
+    </button>
+    <button class="btn btn-primary w-100 mb-2" type="button"
+      data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+      Packaging
+    </button>
+    <button class="btn btn-primary w-100 mb-2" type="button"
+      data-bs-toggle="collapse" data-bs-target="#collapseThree">
+      Distribution
+    </button>
+    <button class="btn btn-primary w-100 mb-2" type="button"
+      data-bs-toggle="collapse" data-bs-target="#collapseFour">
+      Shipping
+    </button>
+  </div>
 
-                  <div id="flushCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="card">
-                      <img src="C:\Users\msope\Pictures\walle.jpg" class="card-img-top" alt="Packaging" style="width:125px;height:100px;">
-                      <div class="card-body">
-                        <h5 class="card-title">Packaging</h5>
-                        <p class="card-text">Details about packaging go here.</p>
-                      </div>
-                    </div>
-                  </div>
+  <!-- Right column with panels -->
+  <div class="col-7">
+    <div class="accordion" id="accordionExample">
+      <div id="collapseOne" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          <h5>Relocations</h5>
+          <img src="C:\Users\msope\Pictures\walle.jpg" alt="">
+          <p>Details about relocations go here.</p>
+        </div>
+      </div>
+      <div id="collapseTwo" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <h5>Packaging</h5>
+            <img src="C:\Users\msope\Pictures\walle.jpg" alt="">
+          <p>Details about packaging go here.</p>
+        </div>
+      </div>
+      <div id="collapseThree" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <h5>Distribution</h5>
+            <img src="C:\Users\msope\Pictures\walle.jpg" alt="">
+          <p>Details about distribution go here.</p>
+        </div>
+      </div>
+      <div id="collapseFour" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <h5>Shipping</h5>
+            <img src="C:\Users\msope\Pictures\walle.jpg" alt="">
+          <p>Details about shipping go here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-                  <div id="flushCollapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="card">
-                      <img src="C:\Users\msope\Pictures\walle.jpg" class="card-img-top" alt="Distribution" style="width:125px;height:100px;">
-                      <div class="card-body">
-                        <h5 class="card-title">Distribution</h5>
-                        <p class="card-text">Details about distribution go here.</p>
-                      </div>
-                    </div>
-                  </div>
+<!-- Script to enforce one open at a time -->
+<script>
+  const accordion = document.getElementById('accordionExample');
+  const buttons = document.querySelectorAll('[data-bs-toggle="collapse"]');
 
-                  <div id="flushCollapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="card">
-                      <img src="C:\Users\msope\Pictures\walle.jpg" class="card-img-top" alt="Shipping" style="width:125px;height:100px;">
-                      <div class="card-body">
-                        <h5 class="card-title">Shipping</h5>
-                        <p class="card-text">Details about shipping go here.</p>
-                      </div>
-                    </div>
-                  </div>
+  // Ensure only one panel open at a time
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const targetId = this.getAttribute('data-bs-target');
+      const targetPanel = document.querySelector(targetId);
 
-                </div> 
-              </div>
-            </div>
+      // Close all panels
+      accordion.querySelectorAll('.accordion-collapse').forEach(panel => {
+        if (panel !== targetPanel) {
+          panel.classList.remove('show');
+        }
+      });
+
+      // Open the clicked panel
+      targetPanel.classList.add('show');
+
+      // Update button states
+      buttons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+
+
+        
           </section>
           <section class="faqs">
             <h2>FAQs</h2>
@@ -179,6 +189,7 @@
 
         </div>
       </div>
+      
         <script src="" async defer></script>
                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
