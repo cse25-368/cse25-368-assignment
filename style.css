@@ -1,6 +1,7 @@
 
 /*BORDER
-#556B2F;*/
+#556B2F;
+2nd color: rgb(165, 166, 165)*/
 
 .content{
     background-color: #e5e5e5e1;
@@ -14,45 +15,74 @@
 .policies .card{
 background-color: #E5e5e5;
 border: 2px solid #556b2f;
+
 }
 
 .container-fluid{
 background-color: #e5e5e5e1;
 }
 
+.policies .row .col .card img{
+width: 200px;
+height: 200px;
+padding-top: 10px;
+display:block; 
+margin:0 auto;
+}
+
+.card-text{
+  grid-auto-rows: 350px; /* all rows same height */
+  overflow: hidden;
+}
+
 .policies {
-       padding: 30px;
-       padding-top: 40px;   
+ padding: 30px;
+ padding-top: 40px;   
 }
 
 .slider .container .carousel-inner .carousel-caption{
 color: aliceblue;
 }
 
-.services .container a{
+.pre-services .container a{
 text-decoration: none;
 color: black;
 }
 
-.services .container .row .p-3{
+.pre-services .container .row .p-3{
   border: 2px solid #556b2f;  
 }
 
-h2{
-padding-top: 25px; 
-padding-bottom: 10px;
+div.content div.container section.services div.col-5 button{
+background-color: gainsboro;
+border: solid 2px #556b2f;
+height: 15%;
+color: black;
 }
 
-.footer .row a{
+div.content div.container section.services div.col-5 button:active{
+color: #7fa43f;
+}
+
+section h1{
+ padding-top: 1%; 
+ margin-bottom: -0.5%;
+ font-weight: 400;
+}
+
+section h2{
+padding-top: 25px; 
+padding-bottom: 10px;
+ font-weight: 300;
+}
+
+#footerStyle{
 text-decoration: none;
 color: black;
-
 }
 
 .footer{
     padding-top: 95px;
-    padding-left: 67px;
-   /* height: 300px;*/
     background-color: rgb(165, 166, 165);
 }
 
@@ -61,7 +91,7 @@ border: 2px solid #556b2f;;
 }
 
 .row .col .card{
-    border: 2px solid #556b2f;
+   border: 2px solid #556b2f;
 }
 
  .border-carousel{
@@ -77,3 +107,128 @@ border: 2px solid #556b2f;;
  .card img{
     border: none;
  }
+
+ @media (min-width: 768px) {
+   #accordionFlushExample{
+    width: 800px;
+  }
+}
+
+.btn.active {
+  background-color: rgb(165, 166, 165);
+  border-color: #556B2F;
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .row > .col-5,
+  .row > .col-7 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.accordion-collapse {
+  transition: height 0.35s ease, opacity 0.35s ease;
+  overflow: hidden;
+}
+
+.accordion-collapse.collapsing {
+  opacity: 0.5;
+}
+
+.fixt{
+padding-top: 20px;
+}
+
+.accordion-collapse.show {
+  opacity: 1;
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    form {
+  
+      padding: 20px;
+      border: 1px solid #556B2F;
+      border-radius: 6px;
+      background-color: #f9f9f9;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #556B2F;
+      border-radius: 4px;
+    }
+    button {
+      background-color: rgb(165, 166, 165);
+      color: white;
+      border: #556B2F;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    button:hover {
+      background-color: rgb(165, 166, 165);
+    }
+
+    .rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
+    .rating input {
+      display: none;
+    }
+    .rating label {
+      font-size: 2rem;
+      color: #ccc;
+      cursor: pointer;
+      padding: 0 5px;
+    }
+    .rating input:checked ~ label {
+      color: rgb(236, 208, 47);
+    }
+    .rating label:hover,
+    .rating label:hover ~ label {
+      color: rgb(228, 203, 57);
+    }
+
+    header{
+      background-color: rgb(255, 165,0);
+    }
+   /*for services*/ 
+/* Mobile: add spacing between stacked items */
+@media (max-width: 767.98px) {
+  .accordion .row {
+    margin-bottom: 1rem; /* space between button/content groups */
+  }
+  .accordion .btn {
+    margin-bottom: 0.5rem; /* small gap under each button */
+  }
+}
+
+/* Desktop: remove gaps between buttons */
+@media (min-width: 768px) {
+  .accordion .btn {
+    margin-bottom: 1%; /* no vertical gap */
+    border-radius: 0; /* optional: makes them look like a flush stack */
+  }
+  .accordion .col-md-5 {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* ensures buttons are stacked tightly */
+  }
+}
+
+
