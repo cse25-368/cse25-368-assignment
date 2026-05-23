@@ -1,10 +1,9 @@
-
-/*BORDER
-#556B2F;
-2nd color: rgb(165, 166, 165)*/
-
 .container-fluid,.content{
     background-color: #e5e5e5e1;
+}
+
+body{
+font-family: Arial, Helvetica, sans-serif;
 }
 
 @media (min-width:768px){
@@ -14,6 +13,7 @@
 }
  #accordionFlushExample{
     width: 800px;
+    background-color: rgb(214, 215, 219); 
   }
   /* Desktop: remove gaps between buttons */
    .accordion .btn {
@@ -47,12 +47,7 @@ margin: auto;
     height: 50vh;
  }
 
-button[class*="btn"]{
-background-color: rgb(214, 215, 219) ;
-  color: #000;
-}
-
-.policies .card{
+.policies .card, .values .card{
 background-color: #E5e5e5;
 border: 2px solid #556b2f;
 
@@ -61,7 +56,7 @@ border: 2px solid #556b2f;
   list-style-type: none;
 }
 
-@media (max-width:586px){
+@media (max-width:767px){
  .policies .row .col .card img{
 width: 100px;
 height: 100px;
@@ -74,11 +69,23 @@ display: block;
   display: none;
 }
 
+/* Mobile: add spacing between stacked items */
+  .accordion .row {
+    margin-bottom: 1rem; /* spacing between button/content groups */
+  }
+  .accordion .btn {
+    margin-bottom: 0.5rem; /* small gap under each button */
+  }
 }
 
 .policies {
  padding: 30px;
     
+}
+.img-form{
+  width:auto;
+  height: 150px;
+  margin: auto;
 }
 
 .spacing{
@@ -122,7 +129,7 @@ padding-bottom: 10px;
     background-color: rgb(165, 166, 165);
 }
 
-#outline, .row .col .card, img[src*="slide"] {
+#outline, img[src*="slide"] {
 border: 2px solid #556b2f;
 }
 
@@ -148,80 +155,68 @@ border: 2px solid #556b2f;
   opacity: 1;
 }
 
-    body {
-      font-family:"Times New Roman", serif;
-      margin: 40px;
-    }
-    
-    aside{
-justify-content: flex-end;
+aside{
+  justify-content: flex-end;
   display: flex;
-    }
-
-    #form-style {
-      padding: 30px;
-      border: 1px solid #556B2F;
-      border-radius: 6px;
-      background-color: rgba(255, 255, 255, 0.959);
-  
-    }
-
-    label {
-      display: block;
-      margin-top: 10px;
-      font-weight: 500;
-    }
-
-    input, select, textarea, button {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border: 1px solid #556B2F;
-      border-radius: 4px;
-    }
-  button {
-      background-color: rgb(60, 156, 140);
-      color: black;
-      border: solid 2px #556B2F;
-      margin-top: 15px;
-      width: 130px;    
-    }
-
-   .footer a:hover, .format a:hover, a:hover, button:hover {
-      text-decoration: underline;
-       text-decoration-thickness: 2px;
-        text-decoration-color: rgb(127, 165, 188);
-      
-    }
-
-    .rating {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: center;
-    }
-    .rating input {
-      display: none;
-    }
-    .rating label {
-      font-size: 3rem;
-      color: #ccc;
-      padding: 0 5px;
-    }
-    .rating input:checked ~ label, .rating label:hover,
-    .rating label:hover ~ label {
-      color: rgb(214, 190, 50);
-    }
-
-
-/* Mobile: add spacing between stacked items */
-@media (max-width: 767.98px) {
-  .accordion .row {
-    margin-bottom: 1rem; /* spacing between button/content groups */
-  }
-  .accordion .btn {
-    margin-bottom: 0.5rem; /* small gap under each button */
-  }
+  padding-top: 15px;
 }
+
+ #form-style {
+  padding: 30px;
+  border: 3px solid #556B2F;
+  border-radius: 6px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+ input, select, textarea, button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #556B2F;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #0d6efd;
+  color: black;
+  border: solid 2px #0d6efd;
+  margin-top: 15px;
+  width: 130px;    
+}
+
+.footer a:hover, .format a:hover, a:hover, button:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgb(127, 165, 188);  
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 3rem;
+  color: lightgray;
+  padding: 0 5px;
+}
+
+.rating input:checked ~ label, .rating label:hover,
+.rating label:hover ~ label {
+  color: rgb(214, 190, 50);
+ }
+ 
+
 
 
 
