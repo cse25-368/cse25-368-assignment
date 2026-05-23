@@ -3,23 +3,39 @@
 #556B2F;
 2nd color: rgb(165, 166, 165)*/
 
-.content{
+.container-fluid,.content{
     background-color: #e5e5e5e1;
 }
 
-.navbar-nav{
+@media (min-width:768px){
+  .navbar-nav{
      gap: 2.5vh;
      font-size: larger;
+}
+ #accordionFlushExample{
+    width: 800px;
+  }
+  /* Desktop: remove gaps between buttons */
+   .accordion .btn {
+    margin-bottom: 1%; /* no vertical gap */
+    border-radius: 0; /* optional: makes them look like a flush stack */
+  }
+  .accordion .col-md-5 {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* ensures buttons are stacked tightly */
+  }
+}
+
+button[class*="btn"]{
+background-color: rgb(214, 215, 219) ;
+  color: #000;
 }
 
 .policies .card{
 background-color: #E5e5e5;
 border: 2px solid #556b2f;
 
-}
-
-.container-fluid{
-background-color: #e5e5e5e1;
 }
 
 .policies .row .col .card img{
@@ -30,10 +46,6 @@ display:block;
 margin:0 auto;
 }
 
-.card-text{
-  grid-auto-rows: 350px; /* all rows same height */
-  overflow: hidden;
-}
 
 .policies {
  padding: 30px;
@@ -44,25 +56,21 @@ margin:0 auto;
 color: aliceblue;
 }
 
-.pre-services .container a{
+.format a, .footer .row a, .pre-services .container a{
 text-decoration: none;
 color: black;
 }
 
-.pre-services .container .row .p-3{
+.media-btn img{
+width: 35px;
+height: 35px;
+border: none;
+}
+
+.pre-services .container .row .format{
   border: 2px solid #556b2f;  
 }
 
-div.content div.container section.services div.col-5 button{
-background-color: gainsboro;
-border: solid 2px #556b2f;
-height: 15%;
-color: black;
-}
-
-div.content div.container section.services div.col-5 button:active{
-color: #7fa43f;
-}
 
 section h1{
  padding-top: 1%; 
@@ -76,29 +84,14 @@ padding-bottom: 10px;
  font-weight: 300;
 }
 
-#footerStyle{
-text-decoration: none;
-color: black;
-}
-
 .footer{
     padding-top: 95px;
     background-color: rgb(165, 166, 165);
 }
 
-img[src*="images"] {
-border: 2px solid #556b2f;;
+#outline, .row .col .card, img[src*="slide"] {
+border: 2px solid #556b2f;
 }
-
-.row .col .card{
-   border: 2px solid #556b2f;
-}
-
- .border-carousel{
-    border: 4px solid  black;
-    width: 980px;
-    height: 60vh;
- }
 
  .carousel-item img{
     height: 50vh;
@@ -108,39 +101,17 @@ border: 2px solid #556b2f;;
     border: none;
  }
 
- @media (min-width: 768px) {
-   #accordionFlushExample{
-    width: 800px;
-  }
-}
-
-.btn.active {
-  background-color: rgb(165, 166, 165);
-  border-color: #556B2F;
-  color: #fff;
-}
-
-@media (max-width: 576px) {
-  .row > .col-5,
-  .row > .col-7 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .btn {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}
 .accordion-collapse {
   transition: height 0.35s ease, opacity 0.35s ease;
   overflow: hidden;
 }
 
-.accordion-collapse.collapsing {
-  opacity: 0.5;
+#right-panel{
+  background-color: rgb(214, 215, 219);
+  border: 2px #556b2f solid;
 }
 
-.fixt{
+.spacing{
 padding-top: 20px;
 }
 
@@ -149,21 +120,23 @@ padding-top: 20px;
 }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family:"Times New Roman", serif;
       margin: 40px;
     }
-    form {
-  
-      padding: 20px;
+    
+    #form-style {
+      padding: 30px;
       border: 1px solid #556B2F;
       border-radius: 6px;
-      background-color: #f9f9f9;
+      background-color: rgba(255, 255, 255, 0.959);
     }
+
     label {
       display: block;
       margin-top: 10px;
-      font-weight: bold;
+      font-weight: 500;
     }
+
     input, select, textarea, button {
       width: 100%;
       padding: 8px;
@@ -171,15 +144,20 @@ padding-top: 20px;
       border: 1px solid #556B2F;
       border-radius: 4px;
     }
+
     button {
-      background-color: rgb(165, 166, 165);
-      color: white;
-      border: #556B2F;
-      cursor: pointer;
+      background-color: rgb(60, 156, 140);
+      color: black;
+      border: solid 2px #556B2F;
       margin-top: 15px;
+      width: 130px;      
     }
-    button:hover {
-      background-color: rgb(165, 166, 165);
+
+   .footer a:hover, .format a:hover, a:hover, button:hover {
+      text-decoration: underline;
+       text-decoration-thickness: 2px;
+        text-decoration-color: rgb(127, 165, 188);
+      
     }
 
     .rating {
@@ -191,44 +169,26 @@ padding-top: 20px;
       display: none;
     }
     .rating label {
-      font-size: 2rem;
+      font-size: 3rem;
       color: #ccc;
-      cursor: pointer;
       padding: 0 5px;
     }
-    .rating input:checked ~ label {
-      color: rgb(236, 208, 47);
-    }
-    .rating label:hover,
+    .rating input:checked ~ label, .rating label:hover,
     .rating label:hover ~ label {
-      color: rgb(228, 203, 57);
+      color: rgb(214, 190, 50);
     }
 
-    header{
-      background-color: rgb(255, 165,0);
-    }
-   /*for services*/ 
+
 /* Mobile: add spacing between stacked items */
 @media (max-width: 767.98px) {
   .accordion .row {
-    margin-bottom: 1rem; /* space between button/content groups */
+    margin-bottom: 1rem; /* spacing between button/content groups */
   }
   .accordion .btn {
     margin-bottom: 0.5rem; /* small gap under each button */
   }
 }
 
-/* Desktop: remove gaps between buttons */
-@media (min-width: 768px) {
-  .accordion .btn {
-    margin-bottom: 1%; /* no vertical gap */
-    border-radius: 0; /* optional: makes them look like a flush stack */
-  }
-  .accordion .col-md-5 {
-    display: flex;
-    flex-direction: column;
-    gap: 0; /* ensures buttons are stacked tightly */
-  }
-}
+
 
 
