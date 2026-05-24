@@ -10,7 +10,7 @@ font-family: Arial, Helvetica, sans-serif;
   .navbar-nav{
      gap: 2.5vh;
      font-size: larger;
-}
+  }
  #accordionFlushExample{
     width: 800px;
     background-color: rgb(214, 215, 219); 
@@ -25,20 +25,25 @@ font-family: Arial, Helvetica, sans-serif;
     flex-direction: column;
     gap: 0; /* ensures buttons are stacked tightly */
   } 
-  
-.about-us .row .col .card img{
-width: 300px;
-height: 300px;
-padding-top: 10px;
-display: block;
-margin: auto;
-}
+    
+  .about img{
+    max-width: 350px;
+    margin: auto;
+  }
 
-.values .card img{
-  margin: auto;
+  .policies .row .col .card img{
   width: 200px;
   height: 200px;
-}
+  padding-top: 10px;
+  display:block; 
+  margin: auto;
+  }
+
+  .values .card img{
+    margin: auto;
+    width: 200px;
+    height: 200px;
+  }
 
 }
 
@@ -49,34 +54,45 @@ margin: auto;
 .policies .card, .values .card{
 background-color: #E5e5e5;
 border: 2px solid #556b2f;
-}
 
+}
 #list{
   list-style-type: none;
 }
 
 @media (max-width:767px){
- .about-us .row .col .card img{
-width: auto;
-height: 100px;
-padding-top: 2px;
-margin: auto;
-display: block;
-}
 
-#carouselExampleDark{
-  display: none;
-}
-
-/* Mobile: add spacing between stacked items */
-  .accordion .row {
-    margin-bottom: 1rem; /* spacing between button/content groups */
+  .policies .row .col .card img{
+  width: 100px;
+  height: 100px;
+  padding-top: 2px;
+  margin: auto;
+  display: block;
   }
-  .accordion .btn {
-    margin-bottom: 0.5rem; /* small gap under each button */
+
+  .about img{
+    max-width: 150px;
+    margin: auto;
   }
+
+  #carouselExampleDark{
+    display: none;
+  }
+
+  /* Mobile: add spacing between stacked items */
+    .accordion .row {
+      margin-bottom: 1rem; /* spacing between button/content groups */
+    }
+    .accordion .btn {
+      margin-bottom: 0.5rem; /* small gap under each button */
+    }
+    
 }
 
+.policies {
+ padding: 30px;
+    
+}
 .img-form{
   width:auto;
   height: 150px;
